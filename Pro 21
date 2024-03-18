@@ -1,0 +1,16 @@
+% Define the Tower of Hanoi predicate
+hanoi(1, Source, _, Target) :-
+    write('Move disk from '),
+    write(Source),
+    write(' to '),
+    write(Target),
+    nl.
+hanoi(N, Source, Auxiliary, Target) :-
+    N > 1,
+    N1 is N - 1,
+    hanoi(N1, Source, Target, Auxiliary),
+    hanoi(1, Source, _, Target),
+    hanoi(N1, Auxiliary, Source, Target).
+
+OUTPUT:
+% ?- hanoi(3, left, center, right).
