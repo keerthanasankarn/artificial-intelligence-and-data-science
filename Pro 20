@@ -1,0 +1,33 @@
+% Facts representing the database
+planet(mercury, rocky, small, hot, closest_to_sun).
+planet(venus, rocky, medium, hot, second_closest_to_sun).
+planet(earth, rocky, medium, moderate, third_closest_to_sun).
+planet(mars, rocky, small, cold, fourth_closest_to_sun).
+planet(jupiter, gas_giant, large, very_cold, fifth_closest_to_sun).
+planet(saturn, gas_giant, large, very_cold, sixth_closest_to_sun).
+planet(uranus, ice_giant, medium, extremely_cold, seventh_closest_to_sun).
+planet(neptune, ice_giant, medium, extremely_cold, eighth_closest_to_sun).
+
+% Rules for querying the database
+rocky_planet(Name) :-
+    planet(Name, rocky, _, _, _).
+
+gas_giant(Name) :-
+    planet(Name, gas_giant, _, _, _).
+
+ice_giant(Name) :-
+    planet(Name, ice_giant, _, _, _).
+OUTPUT:
+% ?- rocky_planet(X).
+% X = mercury ;
+% X = venus ;
+% X = earth ;
+% X = mars.
+
+% ?- gas_giant(X).
+% X = jupiter ;
+% X = saturn.
+
+% ?- ice_giant(X).
+% X = uranus ;
+% X = neptune.
