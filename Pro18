@@ -1,0 +1,16 @@
+% Facts representing the database
+person(john, date(1990, 5, 15)).
+person(sarah, date(1985, 10, 20)).
+person(michael, date(1978, 3, 8)).
+person(lisa, date(1995, 7, 3)).
+
+% Rules for querying the database
+name_and_dob(Name, DOB) :-
+    person(Name, DOB).
+
+OUTPUT:
+% ?- name_and_dob(john, DOB).
+% DOB = date(1990, 5, 15).
+
+% ?- name_and_dob(sarah, DOB).
+% DOB = date(1985, 10, 20).
