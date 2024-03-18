@@ -17,9 +17,3 @@ can_fly(Bird) :-
     write(' cannot fly.'),
     nl.
 
-OUTPUT:
-% ?- can_fly(canary).
-% canary can fly.
-
-% ?- can_fly(ostrich).
-% ostrich cannot fly.
