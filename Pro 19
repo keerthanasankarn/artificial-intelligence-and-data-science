@@ -1,0 +1,23 @@
+% Facts representing the database
+teacher(ms_smith, math).
+teacher(mr_jones, english).
+teacher(mrs_davis, science).
+
+student(john, math).
+student(lisa, english).
+student(mike, science).
+student(sarah, math).
+
+% Rules for querying the database
+teaches_subject(Teacher, Subject) :-
+    teacher(Teacher, Subject).
+
+studies_subject(Student, Subject) :-
+    student(Student, Subject).
+
+OUTPUT:
+% ?- teaches_subject(ms_smith, Subject).
+% Subject = math.
+
+% ?- studies_subject(john, Subject).
+% Subject = math.
